@@ -1,0 +1,26 @@
+spring:
+    mvc:
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp
+    jpa:
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+    h2:
+        console:
+            enabled: true
+    datasource:
+        url: jdbc:h2:file:./gentelella-on-spring
+    jackson:
+        date-format: yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+        time-zone : Asia/Seoul
+logging:
+    level:
+        com.templ.gentelella: DEBUG
+
+server:
+    error:
+        whitelabel:
+            enabled: false

@@ -1,0 +1,112 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<ul class="list-inline text-center">
+					<li>
+						<a href="https://www.facebook.com/millkyc">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/origoni">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/origoni">
+							<span class="fa-stack fa-lg">
+								<i class="fa fa-circle fa-stack-2x"></i>
+								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<p class="copyright text-muted">
+					Powered By <a href="http://millky.com">Millky</a>
+					| Skin designed by <a href="http://startbootstrap.com/template-overviews/clean-blog/">Start Bootstrap</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div>
+	<span class="backToTop" id="backToTop"><a href="#top">back to top</a></span>
+</div>
+
+<script src="/webjars/jquery/2.1.4/dist/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
+<script src="/webjars/jqcloud2/2.0.1/dist/jqcloud.min.js"></script>
+<script src="/webjars/mustache/2.2.1/mustache.min.js"></script>
+<script src="/webjars/momentjs/2.11.2/moment.js"></script>
+<script src="/webjars/momentjs/2.11.2/locale/${pageContext.request.locale.language}.js"></script>
+<script src="/webjars/Autolinker.js/0.25.0/dist/Autolinker.min.js"></script>
+
+<!-- FastClick-->
+<script src="/webjars/gentelella/1.3.0/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress-->
+<script src="/webjars/gentelella/1.3.0/vendors/nprogress/nprogress.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="/webjars/gentelella/1.3.0/build/js/custom.min.js"></script>
+<script type="text/javascript">
+	// Closes the sidebar menu
+	$("#menu-close").click(function(e) {
+		e.preventDefault();
+		$("#sidebar-wrapper").removeClass("active");
+	});
+
+	// Opens the sidebar menu
+	var loadTag = false;
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		
+		if (loadTag == false) {
+			$.ajax({
+				url : '/api/v1/tag-cloud',
+				dataType : 'json',
+				success : function(word_array) {
+					$("#tag-cloud").jQCloud(word_array);
+					loadTag = true;
+				}
+			})
+		}
+		
+		$("#sidebar-wrapper").toggleClass("active");
+	});
+
+	// hide .backToTop first
+	$(".backToTop").hide();
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 100) {
+			$('.backToTop').fadeIn();
+		} else {
+			$('.backToTop').fadeOut();
+		}
+	});
+
+	$('.backToTop').click(function() {
+		$("html, body").animate({
+			scrollTop : 0
+		}, 300);
+		return false;
+	});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23619051-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
