@@ -10,7 +10,7 @@ SpringBoot + Spring Data JPA + ...
 ```
 
 ### 개발된 기능
-- 기본적인 admin theme 뷰
+- gentelella 기반의 기본적인 admin theme 뷰
  
 ![gentelella-on-spring](https://cloud.githubusercontent.com/assets/10793470/23447696/036e9202-fe90-11e6-8d43-7bd7da88a166.png)
 
