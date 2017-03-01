@@ -1,8 +1,6 @@
 # Gentelella on Spring
 ## Spring boot 상에서 gentelella 적용
 
-(SpringBlog from Millky 를 기반으로)
-
 ### Spring Boot base Open-source admin theme template (gentelella)
 
 
@@ -63,4 +61,4 @@ TODO: 추후 업데이트 예정
 * [Gentelella on Yii framework 2](https://github.com/yiister/yii2-gentelella) with an asset bundle, a layout template and some widgets.
 * [Gentelella on Angular 2](https://github.com/kmkatsma/angular2-webpack-starter-gentelella) Angular Webpack Starter modified to utilize the Gentelella.
 * [Gentelella on Aurelia](https://github.com/kmkatsma/aurelia-gentelella) Typescript webpack skeleton modified to utilize the Gentelella.
-* [Gentelella on Spring](https://github.com/renenezll/gentelella-on-spring) thanks to origoni and reneezll.
+* [Gentelella on Spring](https://github.com/renenezll/gentelella-on-spring) thanks to reneezll.
