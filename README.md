@@ -8,12 +8,11 @@
 SpringBoot + Spring Data JPA + ...
 ```
 
-단지 코드만 공개한는 것이 아니라. 개발 과정을 같이 공개하려 합니다.
-
-
 ### 개발된 기능
 - 기본적인 admin theme 뷰
  
+![gentelella-on-spring](https://cloud.githubusercontent.com/assets/10793470/23447696/036e9202-fe90-11e6-8d43-7bd7da88a166.png)
+
 
 ### Quick Start
 - JDK 1.8 or later
