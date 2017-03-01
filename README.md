@@ -1,5 +1,8 @@
 # Gentelella on Spring
-## SpringBlog from Millky 를 기반으로 gentelella 적용
+## Spring boot 상에서 gentelella 적용
+
+(SpringBlog from Millky 를 기반으로)
+
 ### Spring Boot base Open-source admin theme template (gentelella)
 
 
