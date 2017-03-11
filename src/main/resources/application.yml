@@ -11,8 +11,6 @@ spring:
     h2:
         console:
             enabled: true
-    datasource:
-        url: jdbc:h2:file:./gentelella-on-spring
     jackson:
         date-format: yyyy-MM-dd'T'HH:mm:ss.SSSXXX
         time-zone : Asia/Seoul

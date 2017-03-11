@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.millky.blog</groupId>
-	<artifactId>spring-blog</artifactId>
-	<version>0.0.20-SNAPSHOT</version>
+	<groupId>com.spring.gentelella</groupId>
+	<artifactId>com.spring.gentelella</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>SpringBlog</name>
-	<description>SpringBlog project from Millky</description>
+	<name>Dashboard gentelella theme</name>
+	<description>Dashboard gentelella theme</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -162,6 +162,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.offbytwo.jenkins</groupId>
+			<artifactId>jenkins-client</artifactId>
+			<version>0.3.7</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
