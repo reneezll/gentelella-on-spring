@@ -1,0 +1,7 @@
+---
+applications:
+- name: inslab-board
+  memory: 512M
+  random-route: true
+#  url: inslab-board.cfapps.io
+

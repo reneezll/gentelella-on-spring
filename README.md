@@ -10,6 +10,7 @@ SpringBoot + Spring Data JPA + ...
 ```
 ### Demo site
 https://inslab-board.cfapps.io/dashboard
+- Not implemented yet: Menu links 
 
 
 ### 개발된 기능
