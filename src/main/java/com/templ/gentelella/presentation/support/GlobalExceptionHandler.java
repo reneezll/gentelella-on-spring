@@ -18,13 +18,13 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler({ IllegalArgumentException.class })
 	void handleIllegalArgumentException(HttpServletResponse response) throws IOException {
-		log.debug("IllegalArgumentException");
+//		log.debug("IllegalArgumentException");
 		response.sendError(HttpStatus.BAD_REQUEST.value());
 	}
 
 	@ExceptionHandler({ IllegalUserException.class })
 	void handleIllegalUserException(HttpServletResponse response) throws IOException {
-		log.debug("IllegalUserException");
+//		log.debug("IllegalUserException");
 		response.sendError(HttpStatus.FORBIDDEN.value());
 	}
 }

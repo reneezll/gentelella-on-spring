@@ -12,8 +12,9 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class JenkinsRestClient {
-	public String url = "https://hub.spigotmc.org/jenkins/";
 	public URI cUri = null;
+	// test_data
+	public String url = "https://hub.spigotmc.org/jenkins/";
 	public String username = null;
 	public String password = null;
 
