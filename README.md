@@ -8,6 +8,9 @@
 ```
 SpringBoot + Spring Data JPA + ...
 ```
+### Demo site
+https://inslab-board.cfapps.io/dashboard
+
 
 ### 개발된 기능
 - gentelella 기반의 기본적인 admin theme 뷰
