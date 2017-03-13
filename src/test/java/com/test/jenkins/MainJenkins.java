@@ -1,8 +1,10 @@
 package com.test.jenkins;
-import com.offbytwo.jenkins.model.Job;
+import com.templ.backend.jenkins.JenkinsRestClient;
 
-import java.util.Map;
-import com.temple.backend.jenkins.JenkinsRestClient;
+//import java.sql.Timestamp;
+//import java.time.Instant;
+//import java.util.Date;
+//import java.util.Map;
 
 public class MainJenkins {
 
@@ -12,8 +14,10 @@ public class MainJenkins {
 		String username = null;
 		String password = null;
 		JenkinsRestClient jenClient = new JenkinsRestClient(url, username, password);
-		Map<String, Job> jobMap = jenClient.getJobs(null);
-		System.out.println("hello");
+//		Map<String, Job> jobMap = jenClient.getJobsByView("RSS");
+//		Timestamp ts = new Timestamp(1000);
+//		Date dt = Date.from(ts.toInstant());
+//		System.out.println("hello: " + dt );
 
 
 		
