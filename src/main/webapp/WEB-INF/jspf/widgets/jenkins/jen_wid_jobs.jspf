@@ -21,6 +21,14 @@
 		<div class="clearfix"></div>
 	</div>
 	<div class="x_content">
+<c:forEach var="jenInfo" items="${jenList}">
+	<c:out value="${jenInfo.displayName}" />:
+	<c:forEach var="jr" items="${jenInfo.jobMap}">
+		<c:out value="${jr.getJobName()}" />
+
+	</c:forEach>
+
+</c:forEach>
 		<p><a href="${jenkinsAUrl}">jenkinsA </a>
 		</p>
 		<br>

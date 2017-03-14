@@ -4,10 +4,12 @@ import com.offbytwo.jenkins.JenkinsServer;
 import com.offbytwo.jenkins.model.Job;
 import com.offbytwo.jenkins.model.BuildResult;
 import com.offbytwo.jenkins.model.JobWithDetails;
+import com.templ.gentelella.domain.model.entity.jenkins.JobReport;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -25,8 +27,9 @@ public class JenkinsRestClient {
 		this.password = password;
 	}
 
-	public Map<String, Job> getJobsByView(String view) {
+	public ArrayList<JobReport> getJobsByView(String view) {
 		Map<String, Job> map= null;
+		ArrayList<JobReport> arJobRport = new ArrayList<>();
 		URI uri = null;
 		String viewUrl = url+String.format(prefixView,view);
 		try {
@@ -45,10 +48,17 @@ public class JenkinsRestClient {
 			while( keys.hasNext() ){
 				String key = keys.next();
 				Job job = jobs.get(key);
+				JobReport jr = new JobReport();
 				System.out.println( String.format("key : %s, value : %s", key, jobs.get(key)) );
 				JobWithDetails jobDetails = job.details();
 				BuildResult br =jobDetails.getLastBuild().details().getResult();
 				System.out.println("jobName: " + job.getName()+ " lastBuildResult: "+ br.name());
+				jr.setJobName(job.getName());
+				jr.setLastBuildResult(br.name());
+				jr.setViewName(view);
+				jr.setLastDuration(0); // TODO: get timestamp
+				arJobRport.add(jr);
+
 			}
 
 
@@ -56,7 +66,7 @@ public class JenkinsRestClient {
 			System.out.println("Get Job has error.");
 			e.printStackTrace();
 		}
-		return jobs;
+		return arJobRport;
 	}
 
 	public Map<String, Job> getJobs(String filter) {
